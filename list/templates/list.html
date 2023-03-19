@@ -4,6 +4,8 @@
   <head>
     <link href="{%static 'img/icon.png' %}" rel="icon" />
     <meta charset="utf-8" />
+<meta http-equiv="refresh" content="300">
+
     <title>Data List</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <!-- Customized Bootstrap Stylesheet -->
@@ -15,6 +17,12 @@
       rel="stylesheet"
     />
   </head>
+<script>
+    setInterval(function(){
+        location.reload();
+    }, 300000);
+</script>
+
   <body>
     <div class="container-fluid ">
       <div class="row">
@@ -41,7 +49,11 @@
             <tbody>
               <tr>
                 {% for value in last_row_node1 %}
+			{%if value %}
                   <td>{{ value }}</td>
+			{%else%}
+			<td class="text-danger"> Error</td>
+			{%endif%}
                 {% endfor %}
               </tr>
             </tbody>
@@ -65,7 +77,11 @@
             <tbody>
               <tr>
                 {% for value in last_row_node2 %}
+                  	{%if value %}
                   <td>{{ value }}</td>
+			{%else%}
+			<td class="text-danger"> Error</td>
+			{%endif%}
                 {% endfor %}
               </tr>
             </tbody>
@@ -89,7 +105,11 @@
             <tbody>
               <tr>
                 {% for value in last_row_node3 %}
+                  	{%if value %}
                   <td>{{ value }}</td>
+			{%else%}
+			<td class="text-danger"> Error</td>
+			{%endif%}
                 {% endfor %}
               </tr>
             </tbody>
@@ -113,7 +133,11 @@
             <tbody>
               <tr>
                 {% for value in last_row_node4 %}
+                 	{%if value %}
                   <td>{{ value }}</td>
+			{%else%}
+			<td class="text-danger"> Error</td>
+			{%endif%}
                 {% endfor %}
               </tr>
             </tbody>
